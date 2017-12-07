@@ -16,7 +16,8 @@ def get_data(file_name):
  data = pd.read_csv(file_name)
  X_parameter = []
  Y_parameter = []
- for single_square_feet ,single_price_value in zip(data['square_feet'],data['price']):
+ #for single_square_feet ,single_price_value in zip(data['square_feet'],data['price']):
+ for single_square_feet ,single_price_value in zip(data['claimPeriod'],data['LR']):
        X_parameter.append([float(single_square_feet)])
        Y_parameter.append(float(single_price_value))
  return X_parameter,Y_parameter
@@ -34,8 +35,8 @@ def linear_model_main(X_parameters,Y_parameters,predict_value):
  return predictions
 
 X,Y = get_data('input_data.csv')
-predictvalue = 700
+predictvalue = 7
 result = linear_model_main(X,Y,predictvalue)
 print ("Intercept value " , result['intercept'])
 print ("coefficient" , result['coefficient'])
-print ("Predicted value: ",result['predicted_value'])
+print ("Predicted value: ",result['predicted_value'])/
