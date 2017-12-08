@@ -5,7 +5,7 @@ Created on Thu Dec  7 13:48:49 2017
 
 @author: lc4
 """
-"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -40,24 +40,34 @@ result = linear_model_main(X,Y,predictvalue)
 print ("Intercept value " , result['intercept'])
 print ("coefficient" , result['coefficient'])
 print ("Predicted value: ",result['predicted_value'])
-"""
-import numpy as np
 
+x = np.arange(0.0, 12.0, 1.0)
+y1 = result['coefficient']*x+result['intercept']
+
+plt.plot(X, Y,'b-')
+plt.plot(x, y1,'r-')
 
 #%matplotlib inline
 
 ##############no work############
+
 """
+import numpy as np
+
 import matplotlib.pyplot as plt
 from pylab import *
 
+#require both square brakets and commas
+income = [3,4,5,5]
+outgo = [2.5,4.0,3.35,4.9]
 
-income = [3 4 5 5];
-outgo = [2.5 4.0 3.35 4.9];
+subplot(3,1,1); plot(income)
+subplot(3,1,2); plot(outgo)
 
-subplot(2,1,1); plot(income)
-subplot(2,1,2); plot(outgo)
+#data of x axis is from the 1st param and y is from the 2nd.
+subplot(3,1,3); plot(income,outgo)
 """
+
 ####################################
 
 
