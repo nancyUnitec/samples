@@ -5,7 +5,10 @@
 from google.cloud import bigquery
 
 # Instantiates a client
-bigquery_client = bigquery.Client(project='localcover-55')
+client = bigquery.Client(project='localcover-55')
+DATASET_ID = 'yixin'
+dataset_ref = client.dataset(DATASET_ID)
+dataset = bigquery.Dataset(dataset_ref)
 
 ############## log in datastore  #######################
 """
@@ -46,6 +49,8 @@ for dataset in bigquery_client.list_datasets():  # API request(s)
     do_something_with(dataset)
 """
 
+############## make a query, it has an error "not iterable" #########################
+
 """
 QUERY = (
         'SELECT name FROM `bigquery-public-data.usa_names.usa_1910_2013` '
@@ -64,6 +69,63 @@ for row in query_job:  # API request
     assert row[0] == row.salesWeek == row['salesWeek']
 
 """
+
+##################################################
+
+"""
+QUERY = (
+        'SELECT name FROM `bigquery-public-data.usa_names.usa_1910_2013` '
+        'WHERE state = "TX" '
+        'LIMIT 100')
+"""
+QUERY = (
+        'SELECT salesWeek FROM `localcover-55.yixin.x008_LRDiv1` '
+        'LIMIT 100')
+   
+TIMEOUT = 30  # in seconds
+query_job = client.query(QUERY)  # API request - starts the query
+assert query_job.state == 'RUNNING'
+
+# Waits for the query to finish
+iterator = query_job.result(timeout=TIMEOUT)
+rows = list(iterator)
+
+assert query_job.state == 'DONE'
+assert len(rows) == 100
+row = rows[0]
+assert row[0] == row.salesWeek == row['salesWeek']
+
+
+##################create table#######################
+"""
+SCHEMA = [
+    bigquery.SchemaField('full_name', 'STRING', mode='required'),
+    bigquery.SchemaField('age', 'INTEGER', mode='required'),
+]
+table_ref = dataset.table('my_table')
+table = bigquery.Table(table_ref, schema=SCHEMA)
+table = client.create_table(table)      # API request
+
+assert table.table_id == 'my_table'
+"""
+##########################################################
+
+table_ref = dataset.table('my_table')
+table = bigquery.Table(table_ref)
+
+table.table_id == 'my_table'
+table = client.get_table(table)  # API request
+
+ROWS_TO_INSERT = [
+    (u'Phred Phlyntstone', 32),
+    (u'Wylma Phlyntstone', 29),
+]
+
+errors = client.create_rows(table, ROWS_TO_INSERT)  # API request
+
+assert errors == []
+
+"""
 from google.cloud import bigquery
 client = bigquery.Client()
 
@@ -77,7 +139,7 @@ for row in query_job:  # API request
    # Row values can be accessed by field name or index
    assert row[0] == row.name == row['name']
 
-
+"""
 
 
 """
