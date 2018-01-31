@@ -10,6 +10,26 @@ DATASET_ID = 'yixin'
 dataset_ref = client.dataset(DATASET_ID)
 dataset = bigquery.Dataset(dataset_ref)
 
+###############file dependency #############
+# to import MyClass from MyFolder.py
+from MyFolder import MyClass
+
+############### string operations ###################
+
+# if a str is null
+if not str:
+
+# return true if str is null
+return not text        
+
+#get length of str
+len(str)
+
+################ container #######################
+
+
+
+
 ############## log in datastore  #######################
 """
 import datetime
