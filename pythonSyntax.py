@@ -27,7 +27,108 @@ len(str)
 
 ################ container #######################
 
+A = ["a", "b", "c", "d"]
+B = [1, 2, 3, 4]
+C = set(zip(A, B))
+print(C)
 
+#output
+# {('c', 3), ('a', 1), ('d', 4), ('b', 2)}
+
+lenth = len(A)
+print("length = ", lenth)
+length =  4
+
+E = range(0, len(A))
+print("range = ",E)
+# range =  range(0, 4)
+
+F = dict(zip(A, E))
+print("dict zip = ",F)
+# dict zip =  {'a': 0, 'b': 1, 'c': 2, 'd': 3}
+
+
+a=[1,2,3]
+b=[4,5,6,7]
+c=[8,9,10,11,12]
+zz=zip(a,b,c)
+ss = set(zip(a,b,c))
+print(set(ss))
+
+#output
+# {(1, 4, 8), (3, 6, 10), (2, 5, 9)}
+
+x,y,z=zip(*zz)
+print(x)
+print(y)
+print(z)
+
+#output
+# (1, 2, 3)
+# (4, 5, 6)
+# (8, 9, 10)
+
+strName = []
+strName.append("nancy")
+strName.append("linda")
+enumVar =enumerate(zip(*strName)) 
+setVar = set(zip(*strName))
+print(set(enumVar))
+# {(2, ('n', 'n')), (4, ('y', 'a')), (0, ('n', 'l')), (1, ('a', 'i')), (3, ('c', 'd'))}
+
+print(setVar)
+# {('y', 'a'), ('n', 'l'), ('a', 'i'), ('n', 'n'), ('c', 'd')}
+
+for i,letter_group in enumVar:
+    print(letter_group)
+    print(set(letter_group))
+    print("len = ",len(letter_group))
+    print("set len = ",len(set(letter_group)))
+
+
+# ('n', 'l')
+# {'l', 'n'}
+# len =  2
+# set len =  2
+# ('a', 'i')
+# {'i', 'a'}
+# len =  2
+# set len =  2
+# ('n', 'n')
+# {'n'}
+# len =  2
+# set len =  1
+# ('c', 'd')
+# {'d', 'c'}
+# len =  2
+# set len =  2
+# ('y', 'a')
+# {'a', 'y'}
+# len =  2
+# set len =  2
+
+######################### loop ######################
+
+
+list1 = ["This", "is", "a", "test"]
+for i in range (len(list1)):
+    print(i ,list1[i]) 
+# 0 This
+# 1 is
+# 2 a
+# 3 test
+
+	
+print("\n")
+for index, item in enumerate(list1):
+    print(index, item) 
+	
+
+# 0 This
+# 1 is
+# 2 a
+# 3 test
+# 5
 
 
 ############## log in datastore  #######################
