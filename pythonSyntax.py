@@ -14,6 +14,20 @@ dataset = bigquery.Dataset(dataset_ref)
 # to import MyClass from MyFolder.py
 from MyFolder import MyClass
 
+# constructor
+def __init__(self, attr1, attr2, attrDefalt = ''):
+        self.m_attr1 = attr1
+        self.m_attr2 = attr2
+
+# memberFunction
+def memberFunction(self, param1):
+    # function body
+    return
+
+# create obj and call memberFunction
+myObj = MyClass(arg1,arg2...)
+myObj.memberFunction(arg)
+
 ############### string operations ###################
 
 # if a str is null
