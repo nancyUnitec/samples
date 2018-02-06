@@ -28,6 +28,17 @@ def memberFunction(self, param1):
 myObj = MyClass(arg1,arg2...)
 myObj.memberFunction(arg)
 
+############### loop conditions ###################
+
+while condition1 or condition2:
+
+if condition1 and condition2：
+elif condition3:
+else:
+
+if not var:
+	return not var
+
 ############### string operations ###################
 
 # if a str is null
