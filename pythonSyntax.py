@@ -38,6 +38,9 @@ else:
 
 if not var:
 	return not var
+	
+if not var:
+    return None
 
 ############### string operations ###################
 
@@ -49,6 +52,10 @@ return not text
 
 #get length of str
 len(str)
+
+pattern ="zhangyixin"
+print(pattern[3:])#ngyixin
+print(pattern[3])#n
 
 ################ container #######################
 
@@ -110,6 +117,8 @@ for i,letter_group in enumVar:
     print("len = ",len(letter_group))
     print("set len = ",len(set(letter_group)))
 
+#a is one of the elements in the set {}
+a in {'*', '.'}
 
 # ('n', 'l')
 # {'l', 'n'}
