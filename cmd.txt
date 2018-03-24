@@ -1,0 +1,48 @@
+// . gp
+
+GOPATH=$(pwd)
+echo "GOPATH=$GOPATH"
+
+go install lc-api-analytics
+
+cp -f certificates/* bin/
+cp -f secrets/* bin/
+
+./bin/lc-api-analytics
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+go install lc-api-customer/tools/pubsub-cover-provisioned
+
+go install lc-api-customer/tools/yxStudy.go
+./bin/yxStudy
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git clone --recursive git@github.com:localcover/lc-api.git
+cd lc-api
+git submodule foreach "(git checkout master; git status)"
+
+
+git clone --recursive git@github.com:localcover/lc-web.git
+cd lc-web
+git submodule foreach "(git checkout master; git status)"
+
+
+git pull
+git submodule update
+git submodule foreach "(git checkout master; git pull origin master)"
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+set git account:
+git config --global user.name "Your Name"
+git config --global user.email your.name@localcover.com
+
+git config --global user.name "yixinzhangLC"
+git config --global user.email yixin.zhang@localcover.com
+
+git config --global user.name "nancy"
+git config --global user.email xin080124@hotmail.com
+
+
