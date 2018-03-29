@@ -45,4 +45,28 @@ git config --global user.email yixin.zhang@localcover.com
 git config --global user.name "nancy"
 git config --global user.email xin080124@hotmail.com
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+see the HomeBrew version:
+brew -v
+
+install mysql via HomeBrew
+brew install mysql
+
+start the mysql server
+mysql.server start
+
+launch mysql,there's no password at present
+mysql -u root -p
+
+stop mysql server
+mysql.server stop
+
+CREATE DATABASE mantisdb_180324;
+USE mantisdb_180324;
+SOURCE /Users/nancyzhang/Documents/study/mantisdb_180324.sql;
+
+SELECT * FROM mantis_bugnote_text_table
+
+
 
