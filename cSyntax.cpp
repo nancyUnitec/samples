@@ -1,3 +1,31 @@
+
+
+//the use of malloc
+
+int** block = (int**)malloc(sizeof(int*));
+
+//realloc
+int** block = (int**)malloc(sizeof(int*));
+void f(int ***block, int *lastSize)
+{
+	//both the left and the right side are *block
+	*block = (int**)realloc(*block, sizeof(int*)*(*lastSize + 1));
+	int **block_content = *block;
+	//malloc space for the new space
+	block_content[*lastSize] = (int*)malloc(arrSize*sizeof(int));
+	
+}
+
+//memcopy  memcpy((int*), (int*), arrSize * sizeof(int));
+memcpy(desc, sour, arrSize * sizeof(int));
+
+
+
+
+
+
+
+
 #include "stdafx.h"
 
 #include <iostream>
