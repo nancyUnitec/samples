@@ -19,10 +19,27 @@ void f(int ***block, int *lastSize)
 //memcopy  memcpy((int*), (int*), arrSize * sizeof(int));
 memcpy(desc, sour, arrSize * sizeof(int));
 
+//vector
+vector<int> va;//调用默认构造函数，里面什么也没有
+    for(int i=0;i<5;i++)
+        va.push_back(i);//放5个元素进去
+    vector<int> vb(va);//用va初始化vb，此种用法要求va与vb必须是同一种容器，且类型相同
+    vector<int> vc{1,2,3,4};//初始化列表
+    vector<int> vc2={1,2,3,4};//同上，C++11新标准
+    vector<int> vd(va.begin(),va.end());//用迭代器指定的范围初始化
 
+    list<int> li={2,3,4};
+    vector<int> vli(li.begin(),li.end())//使用迭代器可以把不同容器，类型相同的元素用来初始化
 
+    vector<int> ve(10);//包含10初始化值的元素，在ve当中里面有10个0次构造函数是explicit
+    vector<int>  vf(10,1);//在vf里面塞进10个1
 
-
+ios::sync_with_stdio(false);
+vector<int> va,vb,vc;
+va={1,2,3,4};//用C++11的初始化列表来赋值
+swap(va,vc);//交换va和vc
+for(auto x:vc)//输出应该是va里面的值
+        cout<<x<<" ";
 
 
 
@@ -329,3 +346,4 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
 
     return head;
 }
+

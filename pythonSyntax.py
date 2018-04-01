@@ -53,9 +53,27 @@ return not text
 #get length of str
 len(str)
 
-pattern ="zhangyixin"
+pattern ="zhangyixinc"
 print(pattern[3:])#ngyixin
 print(pattern[3])#n
+print(pattern[-1])#c ,-1 means the last one, this can also be used in list,
+#use list[-1] to get the last item in the list
+
+
+############functions#############
+
+func=lambda x:x+1
+print(func(1))
+#2
+print(func(2))
+#3
+ 
+#以上lambda等同于以下函数
+def func(x):
+   return(x+1)
+   
+#sort:
+intervals.sort(key=lambda x: x.start)
 
 ################ container #######################
 
