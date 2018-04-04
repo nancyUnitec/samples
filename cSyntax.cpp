@@ -41,7 +41,30 @@ swap(va,vc);//交换va和vc
 for(auto x:vc)//输出应该是va里面的值
         cout<<x<<" ";
 
+		
+//check if the vector is empty:
+if (intervals.empty())
+	
+//sort the vector
+struct student{
+      char name[10];
+      int score;
+};
+vector<student> vectorStudents;
 
+//待排序的首元素下标，末尾元素下标，比较函数指针
+//if you want to use sort(),you have to #include<algorithm> at first
+sort(vectorStudents.begin(), vectorStudents.end(), comp);
+bool comp(const student &a, const student &b){
+     return a.score < b.score;
+}
+
+//get the last element of the vector:
+vector<Interval> res;
+res.back()
+
+//get the size of the vector:
+intervals.size()
 
 #include "stdafx.h"
 
