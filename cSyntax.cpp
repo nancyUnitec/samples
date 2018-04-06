@@ -28,11 +28,15 @@ vector<int> va;//调用默认构造函数，里面什么也没有
     vector<int> vc2={1,2,3,4};//同上，C++11新标准
     vector<int> vd(va.begin(),va.end());//用迭代器指定的范围初始化
 
-    list<int> li={2,3,4};
-    vector<int> vli(li.begin(),li.end())//使用迭代器可以把不同容器，类型相同的元素用来初始化
-
     vector<int> ve(10);//包含10初始化值的元素，在ve当中里面有10个0次构造函数是explicit
     vector<int>  vf(10,1);//在vf里面塞进10个1
+
+//init vector with array
+int arr1[] = {1, 2, 3};
+vector<int> iv1(arr1, arr1 + 3);
+
+list<int> li={2,3,4};
+vector<int> vli(li.begin(),li.end())//使用迭代器可以把不同容器，类型相同的元素用来初始化
 
 ios::sync_with_stdio(false);
 vector<int> va,vb,vc;

@@ -75,11 +75,20 @@ def func(x):
 #sort:
 intervals.sort(key=lambda x: x.start)
 
+#min:
+nameList = ["zyx","nc"]
+print(min(nameList))   #output the minmum of the list: nc
+
 ################ container #######################
+
+
+
 
 A = ["a", "b", "c", "d"]
 B = [1, 2, 3, 4]
-C = set(zip(A, B))
+#zip(A,B) = ("a",1),("b",2),("c",3),("d",4)
+
+C = set(zip(A, B)) #convert zip to set
 print(C)
 
 #output
@@ -93,7 +102,7 @@ E = range(0, len(A))
 print("range = ",E)
 # range =  range(0, 4)
 
-F = dict(zip(A, E))
+F = dict(zip(A, E)) #convert zip to dict
 print("dict zip = ",F)
 # dict zip =  {'a': 0, 'b': 1, 'c': 2, 'd': 3}
 
@@ -108,7 +117,7 @@ print(set(ss))
 #output
 # {(1, 4, 8), (3, 6, 10), (2, 5, 9)}
 
-x,y,z=zip(*zz)
+x,y,z=zip(*zz)#inverse zip operation
 print(x)
 print(y)
 print(z)
