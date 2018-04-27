@@ -17,6 +17,9 @@ go install lc-api-customer/tools/pubsub-cover-provisioned
 go install lc-api-customer/tools/yxStudy.go
 ./bin/yxStudy
 
+go build hello.go
+./hello
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 git clone --recursive git@github.com:localcover/lc-api.git
