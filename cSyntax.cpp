@@ -63,6 +63,10 @@ bool comp(const student &a, const student &b){
      return a.score < b.score;
 }
 
+//reverse the vector
+vector<int> tmp;  
+reverse(tmp.begin(), tmp.end());   //一句话实现vector反转  
+
 //get the last element of the vector:
 vector<Interval> res;
 res.back()
