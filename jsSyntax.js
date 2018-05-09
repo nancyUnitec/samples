@@ -40,6 +40,23 @@ function forLoop(){
 	}
 }
 
+//...
+function testDotDotDot()
+{
+	const a = {
+        a: 1,
+        b: 2,
+        c: 3
+    };
+    const b = {
+    ...a,
+    d: [],
+    b: 5  //this will update the b value in a{}
+    }
+    console.log(b);
+    //output:{a: 1, b: 5, c: 3, d: Array(0)}
+}
+
 Promise.resolve("foo")
   // 1. 接收 "foo" 并与 "bar" 拼接，并将其结果做为下一个resolve返回。
   .then(
