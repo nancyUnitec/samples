@@ -19,6 +19,14 @@ void f(int ***block, int *lastSize)
 //memcopy  memcpy((int*), (int*), arrSize * sizeof(int));
 memcpy(desc, sour, arrSize * sizeof(int));
 
+
+//string
+
+//get substring, from position left, length is wl
+ S.substr(left, wl)
+ 
+ 
+
 //vector
 vector<int> va;//调用默认构造函数，里面什么也没有
     for(int i=0;i<5;i++)
@@ -30,6 +38,8 @@ vector<int> va;//调用默认构造函数，里面什么也没有
 
     vector<int> ve(10);//包含10初始化值的元素，在ve当中里面有10个0次构造函数是explicit
     vector<int>  vf(10,1);//在vf里面塞进10个1
+	
+	
 
 //init vector with array
 int arr1[] = {1, 2, 3};
@@ -73,6 +83,16 @@ res.back()
 
 //get the size of the vector:
 intervals.size()
+
+//map
+unordered_map<string, int> dict;
+
+//access the element which key = k
+dict[k]
+
+//find how many str in the dict
+dict.count(str)
+
 
 #include "stdafx.h"
 
