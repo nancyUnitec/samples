@@ -57,6 +57,26 @@ function testDotDotDot()
     //output:{a: 1, b: 5, c: 3, d: Array(0)}
 }
 
+//testslice
+function testjs()
+{
+	alert("test!");
+  // rocker.invoke()
+  
+  var arr = new Array(6)
+  arr[0] = "George"
+  arr[1] = "John"
+  arr[2] = "Thomas"
+  arr[3] = "James"
+  arr[4] = "Adrew"
+  arr[5] = "Martin"
+
+  document.write(arr + "<br />")   //output George,John,Thomas,James,Adrew,Martin
+  document.write(arr.slice(2,4) + "<br />") //output arr[2],arr[3] Thomas,James
+  document.write(arr.slice(2) + "<br />")
+  document.write(arr.slice() + "<br />")
+}
+
 Promise.resolve("foo")
   // 1. 接收 "foo" 并与 "bar" 拼接，并将其结果做为下一个resolve返回。
   .then(
