@@ -20,13 +20,17 @@ void f(int ***block, int *lastSize)
 memcpy(desc, sour, arrSize * sizeof(int));
 
 
-//string
+//string s
+//string to char*
+const char* pchar = s.data();//strlen is for char* only
+
+ //get length of the char* or string
+if (strlen(pchar) <= 1) //for char*
+int len = s.length();//for string
 
 //get substring, from position left, length is wl
- S.substr(left, wl)
+ S.substr(left, wl) //s is a string
  
- 
-
 //vector
 vector<int> va;//调用默认构造函数，里面什么也没有
     for(int i=0;i<5;i++)
