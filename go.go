@@ -10,6 +10,12 @@ import (
 
 //format
 
+//build go project fail:
+//if the error is funcxxx not defined in packxxx, for example, can't find round() in math pkg.
+//if packxxx is from the base go library, upgrade the go version, using brew
+//or else, remove the pkg,vendor,gopkg.lock,gopkg.toml and then dep init, dep ensure...
+
+
 //marshal and unmarshal
 
 //struct to json
