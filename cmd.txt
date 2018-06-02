@@ -12,6 +12,9 @@ cp -f secrets/* bin/
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+see go version
+go version
+
 go install lc-api-customer/tools/pubsub-cover-provisioned
 
 go install lc-api-customer/tools/yxStudy.go
@@ -52,6 +55,9 @@ git config --global user.email xin080124@hotmail.com
 
 see the HomeBrew version:
 brew -v
+
+upgrade go version:
+brew upgrade go
 
 install mysql via HomeBrew
 brew install mysql

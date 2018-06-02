@@ -1,4 +1,4 @@
-//arrow function
+//arrow function & the typical usage of map()
 
 var materials = [
   'Hydrogen',
@@ -6,6 +6,8 @@ var materials = [
   'Lithium',
   'Beryllium'
 ];
+
+
 
 materials.map(function(material) { 
   return material.length; 
@@ -17,6 +19,17 @@ materials.map((material) => {
 
 //shorter
 materials.map(material => material.length); // [8, 6, 7, 9]
+
+//convert number to string:
+key = "expected_SM" + demo_months[j].toString()
+
+//In an array, get the index of a certain element & output the greatest integer less than or equal to
+sm_list.indexOf(id)
+Math.floor(num)
+Math.floor(sm_list.indexOf(id)/3)
+
+alert(Math.ceil(25.1)); //the smallest integer greater than or equal
+alert(Math.round(25.9)); //si she wu ru
 
 //the use of eval()
 var evalString="testEval()"
@@ -76,6 +89,26 @@ function testjs()
   document.write(arr.slice(2) + "<br />")
   document.write(arr.slice() + "<br />")
 }
+
+//react: semantic-ui
+//import { Dropdown, Form, Input, Label, Checkbox } from 'semantic-ui-react'
+
+//show by conditions  &&  map an array to widgets groups
+//n elemets in the array will generate n groups of widgets
+{this.props.condition_items.length > 0 && this.props.condition_items.map((item, index) => (
+<Form key={index}>
+              <Form.Group>
+                <ConditionRow index={index} condition_item={item} class_options={this.props.class_options} brand_options={this.props.brand_options} period_months_options={period_months_options} price_to_options={price_to_options} month_option={options}  dispatch={this.props.dispatch} />
+                <Form.Field>
+                <Button size='small' color={item.is_saved ? 'blue' : 'red'} loading={item.save_loading} onClick={() => this.saveConditionRow(index, item)}>
+                    {item.is_saved && <Icon name='checkmark' />}
+                    {item.is_saved ? 'Saved' : 'Unsaved'}
+                  </Button>
+                </Form.Field>
+              </Form.Group>
+            </Form>
+))}
+
 
 Promise.resolve("foo")
   // 1. 接收 "foo" 并与 "bar" 拼接，并将其结果做为下一个resolve返回。
