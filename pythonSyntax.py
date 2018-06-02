@@ -167,6 +167,36 @@ a in {'*', '.'}
 # {'a', 'y'}
 # len =  2
 # set len =  2
+######################### append, pop, join ##########
+
+A = ['*']
+A.append('(')   # A = ['*','(']   
+createOneSolution(A)
+A.pop()    # A = ['*']
+
+#join is to conbine several elements to one string
+seq1 = ['hello','good','boy','doiido']
+str_output1 = ' '.join(seq1)    #hello good boy doiido
+str_output2 = ':'.join(seq1)    #hello:good:boy:doiido
+
+############### embeded func defination ####################
+def generateParenthesis(self, n):
+    def createOneSolution(A = []):  #embeded function, no need to write "self"
+        if len(A) == 2*n:
+            if isValid(A):
+            # add A to solution set
+            ans.append("".join(A))
+        else:
+            ...
+    
+    def isValid(S):
+        ...
+        return True
+
+    ans = []
+    createOneSolution()
+
+    return ans
 
 ######################### loop ######################
 
