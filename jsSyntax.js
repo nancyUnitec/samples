@@ -1,13 +1,10 @@
 //arrow function & the typical usage of map()
-
 var materials = [
   'Hydrogen',
   'Helium',
   'Lithium',
   'Beryllium'
 ];
-
-
 
 materials.map(function(material) { 
   return material.length; 
@@ -22,6 +19,19 @@ materials.map(material => material.length); // [8, 6, 7, 9]
 
 //convert number to string:
 key = "expected_SM" + demo_months[j].toString()
+
+//create an array and mutate its elements
+var yxArr = new Array(len)
+for (let i = 0; i < len; i++) {
+
+  yxArr[i] = {}
+  yxArr[i].xx = old_xxxx[i].xxx
+  yxArr[i].P = "P" + i.toString()
+  if (new_data) {
+    if (new_data.length > 0)
+      yxArr[i].new_xx = new_data[i].xxx
+  }
+}
 
 //In an array, get the index of a certain element & output the greatest integer less than or equal to
 sm_list.indexOf(id)
@@ -52,6 +62,23 @@ function forLoop(){
 		document.getElementById("div"+loop).innerHTML="123"; //will show "123" in div1,div2 and div3
 	}
 }
+
+this.props.condition_items.forEach((item, index) => console.log("condition item. item: ", item))
+//condition item. item:  {period_months_index: "", period_months: 0, price_to_index: "", price_to: 0, class_id: "", …}
+//condition item. item:  {period_months_index: "", period_months: 0, price_to_index: "", price_to: 0, class_id: "190", …}
+
+this.props.condition_items.forEach((item, index) => console.log("condition item. index: ", index))
+//condition item. index:  0
+//condition item. index:  1
+
+//get key and value from object
+compare = {SM2: 35.76, expected_SM2: 105.11, new_SM2: 35.76, SM4: 0, expected_SM4: 108.17}
+for (var pl in compare) {    //pl is key
+  console.log("pl", pl);   //SM2 / expected_SM2
+  console.log("value[pl]", compare[pl])   //35.76 / 105.11
+  sm_list.push(pl)  //sm_list: SM2, expected_SM2, new_SM2....
+}
+
 
 //...
 function testDotDotDot()
