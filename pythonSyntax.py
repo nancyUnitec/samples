@@ -59,6 +59,8 @@ print(pattern[3])#n
 print(pattern[-1])#c ,-1 means the last one, this can also be used in list,
 #use list[-1] to get the last item in the list
 
+#generate a string
+ans = '.'*2+'Q'+'$'*3   #output:..Q$$$
 
 ############functions#############
 
@@ -80,9 +82,6 @@ nameList = ["zyx","nc"]
 print(min(nameList))   #output the minmum of the list: nc
 
 ################ container #######################
-
-
-
 
 A = ["a", "b", "c", "d"]
 B = [1, 2, 3, 4]
@@ -178,6 +177,9 @@ A.pop()    # A = ['*']
 seq1 = ['hello','good','boy','doiido']
 str_output1 = ' '.join(seq1)    #hello good boy doiido
 str_output2 = ':'.join(seq1)    #hello:good:boy:doiido
+
+# not in condition
+if (j not in p) and ((j+i) not in summ) and ((j-i) not in diff):
 
 ############### embeded func defination ####################
 def generateParenthesis(self, n):
