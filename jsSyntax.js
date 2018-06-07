@@ -17,6 +17,14 @@ materials.map((material) => {
 //shorter
 materials.map(material => material.length); // [8, 6, 7, 9]
 
+//find
+var op = data.options.find(((item) => item.value === name))
+      if (!!op) { brand_id.push(op.id) }
+
+const index = old_data.findIndex((element) => {
+  return element.sale_month === demo_months[j]
+})
+
 //convert number to string:
 key = "expected_SM" + demo_months[j].toString()
 
