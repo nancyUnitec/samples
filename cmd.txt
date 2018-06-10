@@ -77,5 +77,18 @@ SOURCE /Users/nancyzhang/Documents/study/mantisdb_180324.sql;
 
 SELECT * FROM mantis_bugnote_text_table
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+gcc main.c
 
+gcc -o 180610 main.c
+
+gcc -g -pthread main.c -o 180610_p
+
+//multiple source files，if you miss the yxAlgorithm.c, you will encounter a link error
+//if you are using mac, the link error is reported by clang
+gcc -o 180610_a main.c yxAlgorithm.c 
+
+cat main.c
+
+vim main.c
