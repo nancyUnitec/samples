@@ -39,6 +39,24 @@ git pull
 git submodule update
 git submodule foreach "(git checkout master; git pull origin master)"
 
+see all th local branch
+git branch
+
+see all the local and remote branch
+git branch -a
+
+switch to local 'xxx' branch
+git checkout xxx
+
+create a new branch 'xxx'
+git branch xxx
+
+push local new branch 'xxx' to remote
+git push origin xxx
+
+see diff
+git diff
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 set git account:
@@ -92,3 +110,136 @@ gcc -o 180610_a main.c yxAlgorithm.c
 cat main.c
 
 vim main.c
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+use git hub to add folders
+select project---right key---open in explorer
+---add folder and file manually---click project node in github again
+---open git shell---git add .\js\global.js
+---if fail,use git add -f .\js\global.js instead
+---type "git commit"----a txtfile will pump out---input commit log
+---close the txtfile---the commit action will be completed automatically
+---type ��git push�� in shell or click ��sync�� button on right top to push change to server.
+
+use git hub to pull public codes
+----just like svn, manually create a folder in windows file browser
+----download the github project
+----open github on windows
+----left top,select "add"
+
+commit to local branch
+git commit -a
+
+push to remote branch 
+git push
+
+if there is a Non-fast-forward error, which means conflicts exists, then use -f to push by force
+git push -f
+
+
+sync the branch
+git pull origin python:python
+
+git pull includes 2 actions:
+git fetch
+git merge
+
+
+create for multi-threading:
+gcc -g -pthread main.c
+//notice, use -pthread, not -lpthread for gcc after version 4.6
+
+build more than one file
+gcc -g gpthread main.c yxAlgorithm.c -o 171004
+
+gdb
+
+create gdb version:
+gcc -g main.c -o forgdb
+
+run forgdb with gdb
+gdb forgdb
+
+set break point
+(gdb)b 3
+
+go on after break point
+(gdb)c
+
+see the value on a specified location
+gdb x 0x12345678
+
+//x means examine
+
+(gdb) print str8
+$1 = 0x8048ca0 "abc"
+(gdb) x 0x8048ca0
+0x8048ca0:     0x00636261
+
+see the next 10 unit memory together
+(gdb)x /10x str8
+
+go on only 1 step after break point
+(gdb)n or s
+
+see stack info
+(gdb)info stack
+or 
+(gdb)bt
+
+see source code
+(gdb)list
+
+see assembly
+(gdb)disas main
+
+see frame info
+(gdb)frame
+
+see local variable
+(gdb)print x
+
+see frame sp
+(gdb)info frame
+
+what else can be seen in frame
+the value of eip, the address of argument...
+
+linux cmd
+
+delete file:
+rm -rf xxx
+
+copy file
+cp file
+
+
+
+test on unitecPC branch
+create on 1900
+
+
+
+java
+
+enter to a windows folder:
+cd
+
+list nodes in the current folder:
+use dir as cd
+
+C:\Users\PCTech\Workspace\HelloWorld\src>javac HelloWorld.java
+
+C:\Users\PCTech\Workspace\HelloWorld\src>java HelloWorld
+
+
+modify on 163 account��at 2230
+
+????create another account to cowork with the first account
+to practise create branch operation and merge operation.
+
+how to launch cmd on Windows8
+press "start" ,input "cmd" in the search textbox locates on the right top������
+
+how to know if a PC has JDK?
+enter Windows cmd, input "java", if the system feedback can't recognize, then there's no JDK.

@@ -41,6 +41,12 @@ for (let i = 0; i < len; i++) {
   }
 }
 
+//remove one element in array:
+state.condition_items.splice(action.index, 1)//remove from index, remove length is 1
+
+//remove all of the elements in array:
+state.condition_items.splice(0, state.condition_items.length)//remove from 0, remove length is 1, so clear the whole arr
+
 //In an array, get the index of a certain element & output the greatest integer less than or equal to
 sm_list.indexOf(id)
 Math.floor(num)
@@ -48,6 +54,10 @@ Math.floor(sm_list.indexOf(id)/3)
 
 alert(Math.ceil(25.1)); //the smallest integer greater than or equal
 alert(Math.round(25.9)); //si she wu ru
+
+//convert string to num
+var input_value = parseInt(e.currentTarget.value, 10)
+var num_a = parseFloat(str_a)
 
 //the use of eval()
 var evalString="testEval()"
@@ -70,6 +80,20 @@ function forLoop(){
 		document.getElementById("div"+loop).innerHTML="123"; //will show "123" in div1,div2 and div3
 	}
 }
+
+//foreach:
+raw_data.forEach(function (element) {
+      console.log("element = ", element) //output:element =  {date_purchased: "2018-05-07", brand_id: "8eb94a3f-cc14-40e5-8356-82ee0bce40c6", sales: 2}
+      var col = date_list.indexOf(element.date_purchased)
+      var date = element.date_purchased.slice(5)
+      console.log("date = ", date)
+      var row = row_id_list.indexOf(element.brand_id)
+      var sales = element.sales
+      table_data[row][date] += sales
+      console.log("date_list[col] = ", date_list[col])//output: date_list[col] =  2018-05-07
+      console.log("date_list[col]。slice(5) = ", date_list[col].slice(5))//output: date_list[col].slice(5) =  05-07
+      item_total[date_list[col].slice(5)] += sales
+    })
 
 this.props.condition_items.forEach((item, index) => console.log("condition item. item: ", item))
 //condition item. item:  {period_months_index: "", period_months: 0, price_to_index: "", price_to: 0, class_id: "", …}
@@ -123,6 +147,10 @@ function testjs()
   document.write(arr.slice(2,4) + "<br />") //output arr[2],arr[3] Thomas,James
   document.write(arr.slice(2) + "<br />")
   document.write(arr.slice() + "<br />")
+
+  //not only array, string also can be sliced
+  var str = "2018-06-21"
+  var after_slice = str.slice(5) //output 06-21
 }
 
 //react: semantic-ui
