@@ -42,6 +42,13 @@ git submodule foreach "(git checkout master; git pull origin master)"
 see all th local branch
 git branch
 
+sync the branch
+git pull origin python:python
+
+git pull includes 2 actions:
+git fetch
+git merge
+
 see all the local and remote branch
 git branch -a
 
@@ -137,12 +144,14 @@ if there is a Non-fast-forward error, which means conflicts exists, then use -f 
 git push -f
 
 
-sync the branch
-git pull origin python:python
 
-git pull includes 2 actions:
-git fetch
-git merge
+
+To delete the local branch use one of the following:
+
+$ git branch -d branch_name
+$ git branch -D branch_name
+
+
 
 
 create for multi-threading:
