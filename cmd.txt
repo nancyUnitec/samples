@@ -45,6 +45,13 @@ git branch
 sync the branch
 git pull origin python:python
 
+get master's new change to branch xxx:
+git checkout master 
+git pull 
+git checkout xxx 
+git merge master 
+git push
+
 git pull includes 2 actions:
 git fetch
 git merge
