@@ -25,6 +25,10 @@ go build hello.go
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+gcloud config configurations list
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 git clone --recursive git@github.com:localcover/lc-api.git
 cd lc-api
 git submodule foreach "(git checkout master; git status)"
@@ -52,6 +56,21 @@ git checkout xxx
 git merge master 
 git push
 
+How to know if the local has some uncommitted changes:
+git status
+
+if:
+Your branch and 'origin/master' have diverged,
+(use "git pull" to merge the remote branch into yours)
+nothing to commit, working tree clean
+
+use these cmd:
+git fetch origin 
+git reset --hard origin/master
+
+after this, run git status again, it will show:
+Your branch is up-to-date with 'origin/master'.
+
 git pull includes 2 actions:
 git fetch
 git merge
@@ -77,7 +96,7 @@ set git account:
 git config --global user.name "Your Name"
 git config --global user.email your.name@localcover.com
 
-git config --global user.name "yixinzhangLC"
+git config --global user.name "Yixin Zhang"
 git config --global user.email yixin.zhang@localcover.com
 
 git config --global user.name "nancy"
@@ -158,6 +177,16 @@ To delete the local branch use one of the following:
 $ git branch -d branch_name
 $ git branch -D branch_name
 
+
+Delete all local branches:
+git branch | grep -v “master” | xargs git branch -D
+
+//after the pull request is handled, the remote branch is deleted on the github web page,
+//you delete the local branch in cmd, but after u enter git branch -a, the remote branch is still listed
+//use the following cmd to sync the remote branch list
+//
+Delete all remote branches:
+git remote update origin --prune
 
 
 
