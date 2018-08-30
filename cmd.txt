@@ -288,3 +288,35 @@ press "start" ,input "cmd" in the search textbox locates on the right topï¿½ï¿½ï
 
 how to know if a PC has JDK?
 enter Windows cmd, input "java", if the system feedback can't recognize, then there's no JDK.
+
+python
+
+how to install the packages?
+2 way, low way:
+pip3 install numpy
+pip3 install arch
+pip3 install pandas
+pip3 install matplotlib
+pip3 install scikit-learn
+pip3 install scipy
+pip3 install statsmodels
+pip install pandas-gbq
+pip install patsy
+
+better and simple way:
+pip3 install -r requirements.txt
+
+requirements.txt is like this:
+pandas>=0.23.4
+statsmodels>=0.9.0
+matplotlib>=2.2.3
+scipy>=1.1.0
+google-cloud-bigquery>=1.5.0
+google-cloud-spanner>=1.4.0
+
+can I use pip instead of pip3?
+yes, but u should add python3 in front of the cmd, like this:
+$ python3 -m pip install package_name
+which has the same effect with:
+$ pip3 install package_name
+
