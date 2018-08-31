@@ -32,6 +32,21 @@
 <p>Nike shoes are specifically designed to let your feet move more naturally and freely than traditional athletic shoes. Because you’ll be using some muscles in your feet more than you might be used to, it may take some time for them to get used to all that freedom. To give your feet time to adapt, we recommend you transition into using your Nike footwear gradually.</p>
 <p class = redfont>why</p>
 
+<p>
+    def plot_result(train, predicted, name, test=np.array([])):
+        # print("predicted: ", predicted)
+        # print("test: ", test)
+        plt.figure(figsize=(16, 8))
+        plt.title(name)
+        plt.plot(train, label='Train')
+        plt.plot(predicted, marker='o', label='Predicted')
+        if int(len(test)) > 0:
+            plt.plot(test, marker='o', label='Test')
+        plt.legend()
+        plt.show()
+</p>
+
+
 </div>
 
 </div>

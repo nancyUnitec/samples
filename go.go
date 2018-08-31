@@ -68,3 +68,16 @@ msg.Nack()
 
 //resend the msg every 60 secs
 do nothing, return directly 
+
+//correct method of tracing code:
+//write a number to represent the level order, then the call stack can be seen
+ReadDistributionsOfRateIDGroupBySaleBlock
+0 GetAllDataByRateID
+1 goRoutineSearchFailureDistributionOfRateGroupBySaleBlock
+2 GenerateSQLForFailureDistributionOfRateGroupBySaleBlock
+2 failureDistribution, err := ReadMapOfFailureDistribution(ctx, spannerClient, sqlForSummaries, paramsForSummaries)
+
+0 GetAllDataByRateID
+1 goRoutineSearchFailureDistributionOfRateGroupBySaleBlock
+2 GenerateSQLForFailureDistributionOfRateGroupBySaleBlock
+3 failureDistribution, err := ReadMapOfFailureDistribution(ctx, spannerClient, sqlForSummaries, paramsForSummaries)
