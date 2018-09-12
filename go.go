@@ -81,3 +81,10 @@ ReadDistributionsOfRateIDGroupBySaleBlock
 1 goRoutineSearchFailureDistributionOfRateGroupBySaleBlock
 2 GenerateSQLForFailureDistributionOfRateGroupBySaleBlock
 3 failureDistribution, err := ReadMapOfFailureDistribution(ctx, spannerClient, sqlForSummaries, paramsForSummaries)
+
+//how to format the embedded json text?
+create a new json file, copy the text in it and press 'option + f'
+
+//variable undefined
+case error, write the uppercase for lowercase
+

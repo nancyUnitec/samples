@@ -1,0 +1,12 @@
+
+colabs:
+
+https://medium.com/@josemarcialportilla/using-python-and-auto-arima-to-forecast-seasonal-time-series-90877adff03c
+
+https://colab.research.google.com/notebooks/io.ipynb#scrollTo=xM70QWdxeE7q
+
+https://github.com/nicholaslocascio/bcs-lstm
+
+https://www.altumintelligence.com/articles/a/Time-Series-Prediction-Using-LSTM-Deep-Neural-Networks
+
+
