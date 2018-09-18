@@ -222,6 +222,14 @@ for index, item in enumerate(list1):
 # 2 a
 # 3 test
 # 5
+################### switch case ############################
+"""
+there is no switch in python
+
+follow the da dao zhi jian principle
+
+"""
+
 
 
 ############## log in datastore  #######################

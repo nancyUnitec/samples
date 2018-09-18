@@ -18,5 +18,12 @@ lnprice = log(claimCost_exGST[1:96])
 #lnprice = data[:,4]
 lnprice
 
+# $means read data from dataframe
+# @means read data from a class instance
+alpha <- fcast$model$par["alpha"]
+fcast$mean <- fcast$mean + tmp2 * (0:(h - 1) + (1 - (1 - alpha) ^ n) / alpha)
+
+
+
 
 

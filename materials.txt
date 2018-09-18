@@ -9,4 +9,11 @@ https://github.com/nicholaslocascio/bcs-lstm
 
 https://www.altumintelligence.com/articles/a/Time-Series-Prediction-Using-LSTM-Deep-Neural-Networks
 
+theta model:
+
+https://github.com/robjhyndman/forecast
+https://github.com/robjhyndman/forecast/blob/master/R/forecast.R
+
+
+https://github.com/M4Competition/M4-methods
 

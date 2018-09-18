@@ -188,6 +188,21 @@ git branch | grep -v “master” | xargs git branch -D
 Delete all remote branches:
 git remote update origin --prune
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VSCode
+
+setting - shortcut -
+
+fold all functions:
+cmd+k cmd+0
+
+explanation:
+cmd+k then, the bottom bar will show: waiting for the next cmd
+then cmd+0
+
+unfold all functions
+cmd+k cmd+9
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 create for multi-threading:
