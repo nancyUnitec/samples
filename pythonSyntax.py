@@ -44,6 +44,22 @@ if not var:
 
 ############### string operations ###################
 
+a = "zhangyixin"
+print("sorted zhangyixin = ",sorted(a))   
+#output:sorted zhangyixin =  ['a', 'g', 'h', 'i', 'i', 'n', 'n', 'x', 'y', 'z
+
+>>>li = ['my','name','is','bob'] 
+>>>' '.join(li) #'my name is bob' 
+>>>'_'.join(li) #'my_name_is_bob' 
+
+>>> b = 'my..name..is..bob' 
+>>> b.split() # ['my..name..is..bob'] 
+>>> b.split("..") # ['my', 'name', 'is', 'bob'] 
+>>> b.split("..",0) #['my..name..is..bob'] 
+>>> b.split("..",1) #['my', 'name..is..bob'] 
+>>> b.split("..",2) #['my', 'name', 'is..bob'] 
+>>> b.split("..",-1) #['my', 'name', 'is', 'bob'] 
+
 # if a str is null
 if not str:
 

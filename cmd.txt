@@ -98,6 +98,7 @@ git config --global user.email your.name@localcover.com
 
 git config --global user.name "Yixin Zhang"
 git config --global user.email yixin.zhang@localcover.com
+git config --global github.token e97279836f0d415a3954c1193dba522f
 
 git config --global user.name "nancy"
 git config --global user.email xin080124@hotmail.com

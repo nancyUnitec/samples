@@ -15,18 +15,26 @@ void f(int ***block, int *lastSize)
 	block_content[*lastSize] = (int*)malloc(arrSize*sizeof(int));
 	
 }
+char *res = (char*)malloc(maxlen + 1);
 
 //memcopy  memcpy((int*), (int*), arrSize * sizeof(int));
 memcpy(desc, sour, arrSize * sizeof(int));
 
+memset(dict, '\0', 128 * sizeof(int));
+//number limit, Minimum and Maximum value for a variable of type int.
+if (res<INT_MIN || res>INT_MAX)
+	res = 0;
 
 //string s
 //string to char*
 const char* pchar = s.data();//strlen is for char* only
 
- //get length of the char* or string
+//get length of the char* or string
 if (strlen(pchar) <= 1) //for char*
 int len = s.length();//for string
+
+//copy string
+strncpy(dest, source, length); 
 
 //get substring, from position left, length is wl
  S.substr(left, wl) //s is a string
@@ -43,8 +51,6 @@ vector<int> va;//调用默认构造函数，里面什么也没有
     vector<int> ve(10);//包含10初始化值的元素，在ve当中里面有10个0次构造函数是explicit
     vector<int>  vf(10,1);//在vf里面塞进10个1
 	
-	
-
 //init vector with array
 int arr1[] = {1, 2, 3};
 vector<int> iv1(arr1, arr1 + 3);
@@ -239,94 +245,6 @@ bool isMatch(char* s, char* p) {
 	}
 
 	return res;
-
-}
-
-
-
-/*
-struct ListNode* swap(struct ListNode* n1,struct ListNode* n2)
-{
-struct ListNode* tmp = n2-> next;
-n1->next = tmp;
-n2->next = n1;
-
-return n1;
-}
-
-*/
-
-/*
-struct ListNode* swapPairs(struct ListNode* head) {
-
-if (!head)
-return NULL;
-
-else if (!(head->next))
-return head;
-
-else
-{
-//struct ListNode* new = (struct ListNode*)malloc(sizeof(struct ListNode));
-//new ->next = head->next;
-struct ListNode* new;
-struct ListNode* tail;
-//struct ListNode* tmp;
-
-struct ListNode* i = head;
-struct ListNode* j = head->next;
-new = j;
-
-while (i&&j)
-{
-//tail = swap(i,j);
-//tmp = j-> next;
-i->next = j->next;
-j->next = i;
-tail = i;
-
-if (i->next)
-{
-i = i->next;
-j = i->next;
-
-if (j)
-{
-tail->next = j;
-}
-
-}
-else
-break;
-
-}
-
-return new;
-
-}
-
-}
-
-
-*/
-
-struct ListNode* swapPairs(struct ListNode* head) {
-
-	if (!head)
-		return NULL;
-
-	else if (!(head->next))
-		return head;
-
-	else
-	{
-		struct ListNode* newHead = swapPairs(head->next->next);
-		struct ListNode* tmp = head->next;
-		head->next = newHead;
-		tmp->next = head;
-		return tmp;
-
-	}
 
 }
 
