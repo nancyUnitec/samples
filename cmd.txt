@@ -307,6 +307,11 @@ enter Windows cmd, input "java", if the system feedback can't recognize, then th
 
 python
 
+to see the installed python pkg list:
+pip freeze
+or
+pip list
+
 how to install the packages?
 2 way, low way:
 pip3 install numpy
